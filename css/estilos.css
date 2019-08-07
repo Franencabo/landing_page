@@ -90,6 +90,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'AcuminPro_Bold,"Helvetica", "Helvetica_Bold", "Helvetica_Oblique"';
+  font-style: normal;
+  font-weight: normal;
+  src: local('AcuminPro_Bold,"Helvetica", "Helvetica_Bold", "Helvetica_Oblique"') url('../assets/fonts/AcuminPro_Bold,"Helvetica", "Helvetica_Bold", "Helvetica_Oblique".woff') format("woff"); }
+
 .boton {
   display: inline-block;
   width: 300px;
@@ -119,3 +125,46 @@ input, .desplegable {
 
 input:checked ~ .desplegable {
   display: block; }
+
+.banner {
+  background: url("../assets/img/desktop/@1x/banner.png") no-repeat;
+  background-size: cover;
+  height: 455px; }
+
+.banner {
+  display: -ms-grid;
+  display: grid;
+  height: 455px;
+  padding: 20px 40px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template: 2fr 1fr 1fr 2fr 1fr/ 1fr 1fr;
+  grid-template-areas: " . . " "titulo titulo" "link1 link2" ". ." "avatar . ";
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center; }
+  .banner__titulo {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: titulo;
+    -ms-grid-column-align: center;
+    justify-self: center; }
+  .banner__link1 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: link1;
+    -ms-grid-column-align: center;
+    justify-self: center; }
+  .banner__link2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: link2;
+    -ms-grid-column-align: center;
+    justify-self: center; }
+  .banner__avatar {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: avatar;
+    justify-self: baseline; }
