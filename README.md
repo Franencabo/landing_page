@@ -1,1 +1,1 @@
-# _PLANTILLA PARA SASS_
+# Landing page creada con SASS.
